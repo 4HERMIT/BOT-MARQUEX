@@ -3175,7 +3175,7 @@ case prefix+ 'google':
       if(!q) return reply('y lo que quieres buscar?')
 			.then(res => res.json())
 			afanya = args.join(' ')
-			gogel = await axios.get(`https://shot.screenshotapi.net/screenshot?token=D2TDY3F-G5YMM94-K9JEQT8-FYBDQBB&url=https://www.google.com/search?q=${afanya}&safe=strict&sxsrf=ALeKk03WtBNqunvK303Qm3aEToejzpQvag%3A1621384426733&source=hp&ei=6lykYJbUKtPmz7sP-MugmAU&oq=p&gs_lcp=ChFtb2JpbGUtZ3dzLXdpei1ocBADMgQIIxAnMgQIIxAnMgQIIxAnMggIABCxAxCDATIFCAAQsQMyBQguELEDMggIABCxAxCDATIICAAQsQMQgwE6BwgjEOoCECdQlg9Ylg9g9hJoAXAAeACAAVmIAVmSAQExmAEAoAEBsAEP&sclient=mobile-gws-wiz-hp&full_page=true&fresh=true&output=json&file_type=png&wait_for_event=load`)
+			gogel = await axios.get(`https://shot.screenshotapi.net/screenshot?token=D2TDY3F-G5YMM94-K9JEQT8-FYBDQBB&url=https://www.google.com/search?q=${afanya}&rlz=1C1VDKB_esPE946PE946&oq=${afanya}&aqs=chrome.0.0i20i263i512j46i512j0i512j46i512j0i512j46i512j0i512l2j46i512.2446j1j9&sourceid=chrome&ie=UTF-8`)
 			bupnyah = await getBuffer(gogel.data.screenshot)
 			turbo.sendMessage(from, bupnyah, image, {quoted: mek, sendEphemeral: true})
 			.catch(err => {
